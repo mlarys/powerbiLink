@@ -15,6 +15,7 @@
         
         // Open the local file using the file:// protocol
         if (localFilePath) {
+            alert('file://' + localFilePath);
             window.location.href = 'file://' + localFilePath;
         } else {
             // Handle the case where the parameter is missing or invalid
