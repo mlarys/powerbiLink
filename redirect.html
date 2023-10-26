@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirect Page</title>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    
+    <!-- JavaScript Redirect Script Goes Here -->
+<script>
+    window.onload = function() {
+        // Get the parameter from the URL
+        var params = new URLSearchParams(window.location.search);
+        var localFilePath = params.get('dmf');
+        
+        // Open the local file using the file:// protocol
+        if (localFilePath) {
+            window.location.href = 'file://' + localFilePath;
+        } else {
+            // Handle the case where the parameter is missing or invalid
+            alert('Invalid file path!');
+        }
+    };
+</script>
+</body>
+</html>
